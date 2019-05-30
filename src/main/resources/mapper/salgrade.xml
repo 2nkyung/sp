@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.osf.sp.mapper.SalGradeMapper">
+   <select id="selectSalGradeList" resultType="map">
+      select * from salgrade
+   </select>
+   
+    <select id="selectSalGrade" resultType="map">
+      select * from salgrade
+      where grade=#{grade}
+   </select>
+   
+   <insert id="insertSalGrade" parameterType="map">
+      insert into salgrade
+      values(#{grade},#{losal},#{hisal})
+   </insert>
+   
+   
+</mapper>
